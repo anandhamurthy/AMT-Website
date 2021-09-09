@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fec107;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    position: relative;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 80px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: tomato;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.grid {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.grid .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grid .row-item {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background: white;
+    padding: 20px 12px;
+    margin-bottom: 5%;
+    transition: 0.5s;
+    flex: 1;
+    box-sizing: border-box;
+    margin: 2%;
+}
+
+.grid .row-item img {
+    width: 100px;
+    text-align: center;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.grid .row-item .active {
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+@media(max-width: 700px) {
+    .grid .row {
+        flex-direction: column;
+    }
+    .grid .row-item {
+        width: 250px;
+        height: 300px;
+        text-align: center;
+    }
+    nav img {
+        width: 60px;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.footer .fab, .footer .fas {
+    color: black;
+    margin: 0 13px;
+    cursor: pointer;
+    font-size: x-large;
+    padding: 18px 0;
+}
